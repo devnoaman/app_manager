@@ -5,3 +5,4 @@ library app_manager;
 /// import them with showwing only the
 /// things you want
 export './src/extenstions.dart';
+export './src/theme_manager.dart';
