@@ -17,6 +17,7 @@ class ThemeManager extends ChangeNotifier implements PrefsModel {
   @override
   initPrefs() async {
     _prefs ??= await SharedPreferences.getInstance();
+    loadTheme();
     notifyListeners();
   }
 
@@ -71,7 +72,26 @@ class ThemeManager extends ChangeNotifier implements PrefsModel {
 
   @override
   loadTheme() {
-    // TODO: implement toogleTheme
+    // getting the current theme from prefs;
+    var appstate = _prefs!.getString(prefKey) ?? 'light';
+
+    switch (appstate) {
+      case 'light':
+        mode = ThemeMode.dark;
+
+        makeDark();
+        break;
+      case 'dark':
+        mode = ThemeMode.light;
+        makeLigth();
+        break;
+      default:
+        print('it is default');
+        mode = ThemeMode.system;
+
+        break;
+    }
+
     throw UnimplementedError();
   }
 
