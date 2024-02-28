@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:app_manager/app_manager.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    LanguageManager manager = LanguageManager([], '/lib/l10n');
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
