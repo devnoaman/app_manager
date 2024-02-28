@@ -7,5 +7,3 @@ abstract class PrefsModel {
   loadTheme();
   themeMode();
 }
-
-abstract class LanguageBase {}

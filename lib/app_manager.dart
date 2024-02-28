@@ -6,3 +6,4 @@ library app_manager;
 /// things you want
 export './src/extenstions.dart';
 export './src/theme_manager.dart';
+export './src/language_manager.dart';
